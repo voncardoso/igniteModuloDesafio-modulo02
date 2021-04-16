@@ -7,7 +7,7 @@ import {
 import { formatPrice } from '../../util/format';
 
  import { useCart } from '../../hooks/useCart';
- import { formatPrice } from '../../util/format';
+ 
 import { Container, ProductTable, Total } from './styles';
 
 interface Product {
@@ -38,7 +38,7 @@ const Cart = (): JSX.Element => {
   }
 
   function handleProductDecrement(product: Product) {
-     TODO
+    updateProductAmount({productId: product.id, amount: product.amount - 1});
   }
 
   function handleRemoveProduct(productId: number) {
